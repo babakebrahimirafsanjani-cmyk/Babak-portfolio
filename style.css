@@ -1,0 +1,365 @@
+
+/* 1. تنظیمات عمومی */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0B1020;
+    color: #F8FAFC;
+    line-height: 1.6;
+}
+
+/* 2. نوار بالای سایت */
+
+header {
+    width: 100%;
+    padding: 22px 8%;
+    background-color: #0B1020;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #FFFFFF;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #60A5FA;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #CBD5E1;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #60A5FA;
+}
+
+.language-btn {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid #475569;
+    padding: 9px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* 3. بخش اصلی صفحه */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 12%;
+}
+
+.greeting {
+    color: #60A5FA;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 5vw, 65px);
+    line-height: 1.2;
+    max-width: 800px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #60A5FA;
+}
+
+.description {
+    color: #94A3B8;
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* 4. دکمه‌ها */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 13px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background-color: #2563EB;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #1D4ED8;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    border: 1px solid #475569;
+    color: white;
+}
+
+.secondary-btn:hover {
+    border-color: #60A5FA;
+    color: #60A5FA;
+}
+
+/* 5. بخش‌های پایین صفحه */
+
+section:not(.hero) {
+    padding: 80px 12%;
+    min-height: 200px;
+}
+
+section h2 {
+    font-size: 32px;
+    color: #60A5FA;
+}
+
+/* 6. نمایش مناسب در موبایل */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 50px 7%;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+}
+
+/* ABOUT SECTION */
+
+.about {
+    background-color: #0F172A;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-label {
+    color: #60A5FA;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.about-text h3 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #94A3B8;
+    margin-bottom: 18px;
+}
+
+.about-details {
+    display: grid;
+    gap: 15px;
+}
+
+.detail-card {
+    background-color: #1E293B;
+    padding: 22px;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.detail-card:hover {
+    transform: translateY(-4px);
+    border-color: #60A5FA;
+}
+
+.detail-card span {
+    color: #60A5FA;
+    font-size: 13px;
+}
+
+.detail-card h4 {
+    margin: 8px 0;
+}
+
+.detail-card p {
+    color: #94A3B8;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
+/* PROJECTS SECTION */
+
+.projects {
+    background-color: #0B1020;
+}
+
+.section-description {
+    color: #94A3B8;
+    margin-top: 12px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.project-card {
+    background-color: #1E293B;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: #60A5FA;
+}
+
+.project-image {
+    height: 170px;
+    background: linear-gradient(135deg, #1D4ED8, #0F172A);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image span {
+    font-size: 45px;
+    font-weight: bold;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.project-info {
+    padding: 22px;
+}
+
+.project-info h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.project-info p {
+    color: #94A3B8;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tags span {
+    background-color: #0F172A;
+    color: #60A5FA;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* CONTACT + FOOTER */
+.contact { background-color: #0F172A; }
+.contact-links { display: flex; gap: 15px; flex-wrap: wrap; }
+footer { text-align: center; padding: 25px; color: #94A3B8; font-size: 14px; border-top: 1px solid #334155; }
+.project-card a.project-link { display: inline-block; margin-top: 16px; color: #60A5FA; text-decoration: none; font-size: 14px; }
+.reveal { opacity: 0; transform: translateY(25px); transition: 0.7s; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* CERTIFICATES */
+.certificates { background-color: #0F172A; }
+.certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 22px; }
+.cert-card {
+    display: block; text-decoration: none; color: inherit; background-color: #1E293B;
+    border: 1px solid #334155; border-radius: 14px; padding: 18px; transition: 0.3s;
+}
+.cert-card:hover { transform: translateY(-6px); border-color: #60A5FA; }
+.cert-img {
+    height: 170px; border-radius: 10px; background: #0B1020; margin-bottom: 14px;
+    display: flex; align-items: center; justify-content: center; font-size: 48px; overflow: hidden;
+}
+.cert-img img { width: 100%; height: 100%; object-fit: cover; }
+.cert-card h4 { margin-bottom: 4px; }
+.cert-card p { color: #94A3B8; font-size: 14px; }
+
+/* RTL / فارسی */
+[dir="rtl"] body { font-family: "Vazirmatn", Tahoma, Arial, sans-serif; }
+[dir="rtl"] .section-label { letter-spacing: 0; }
+.hero h1 .accent { color: #60A5FA; }
+.hero h1 .accent { color: #60A5FA; }
+
+/* عکس پروژه (اگر image داشته باشد) */
+a.project-image { display: block; padding: 10px; background: #FFFFFF; text-decoration: none; }
+a.project-image img { width: 100%; height: 100%; object-fit: contain; display: block; }
